@@ -22,7 +22,7 @@ cacheSolve <- function(x, ...){#x is of a makeCacheMatrix object
         }
         #if not cached, calculate then cache
         matrix <- x$get()
-        inv <- solve(matrix)
+        inv <- solve(matrix,...)
         x$setInv(inv)
         inv
 }
